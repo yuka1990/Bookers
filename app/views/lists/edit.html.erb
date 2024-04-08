@@ -1,5 +1,5 @@
 <h1>Editing Book</h1>
-<%= form_with model:@list,url:update_list_path(@list.id),method: :patch do |f| %>
+<%= form_with model:@list do |f| %>
 
  <p>Title</p>
  <%= f.text_field :title %>

@@ -2,5 +2,5 @@
 <br>
 <h4>Body:</h4><p><%= @list.body %></p>
 <%= link_to "Edit" , edit_list_path(@list.id) %>
-<%= link_to "Destroy",destroy_list_path(@list.id), method: :delete, "data-confirm" => "Are you sure?" %>
+<%= link_to "Destroy",list_path(@list.id), method: :delete, "data-confirm" => "Are you sure?" %>
 

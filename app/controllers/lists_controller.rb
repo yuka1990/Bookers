@@ -4,10 +4,13 @@ class ListsController < ApplicationController
   end
   
   def create
-    list = List.new(list_params)
+    @list = List.new(list_params)
     # ビューファイルへの受け渡しが必要でないため
-    list.save
-    redirect_to list_path(list.id)
+    if @list.save
+      redirect_to list_path(@list.id)
+    else
+      render :new
+    end
   end
 
   def index
