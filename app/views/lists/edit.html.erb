@@ -1,11 +1,12 @@
-<h1>Editing Book</h1>
-<%= form_with model:@list do |f| %>
-
+<h3>Editing Book</h3>
+<div class="book">
+ <%= form_with model:@list do |f| %>
  <p>Title</p>
  <%= f.text_field :title %>
- 
  <p>Body</p>
  <%= f.text_area :body %>
- 
+</div>
+<div class="create-box">
  <%= f.submit 'Update Book'%>
+</div>
 <% end %>

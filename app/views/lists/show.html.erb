@@ -1,6 +1,15 @@
-<h4>Title:</h4><p><%= @list.title %></p>
-<br>
-<h4>Body:</h4><p><%= @list.body %></p>
+<div class="edit">
+  <h4>Title:</h4>
+  <p><%= @list.title %></p>
+</div>
+
+<div class="edit">
+  <h4>Body:</h4><p><%= @list.body %></p>
+</div>
+<div class="edit2">
 <%= link_to "Edit" , edit_list_path(@list.id) %>
+<p>&nbsp;|&nbsp;</p>
 <%= link_to "Destroy",list_path(@list.id), method: :delete, "data-confirm" => "Are you sure?" %>
+</div>
+
 

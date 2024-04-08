@@ -1,3 +1,46 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3{
+  margin :20px;
+}
+.title{
+  text-align:center;
+}
+
+.list-wrap{
+  display:block
+}
+.book{
+  margin:10px 20px;
+}
+.create-box{
+  margin:0 20px;
+}
+.parent{
+  margin:20px;
+  display:flex;
+  flex-wrap:wrap;
+}
+span{
+  display:block;
+}
+.box{
+  margin:0px 10px 0px 0px;
+}
+.edit{
+  margin:40px;
+  display:flex;
+  flex-wrap:wrap;
+}
+.edit2{
+  margin:20px;
+  display:flex;
+  flex-wrap:wrap;
+}

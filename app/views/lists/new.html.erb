@@ -1,5 +1,22 @@
-<h1>Books</h1>
-<h2>New book</h2>
+<h3>Books</h3>
+<div class="parent">
+  <div class="box">
+   <h4 class="title">Title</h4>
+   <% @lists.each do |list| %>
+     <span><%= list.title %></span>
+   <% end %>
+   </div>
+  <div class="box">
+  <h4 class="title">Body</h4>
+  <% @lists.each do |list| %>
+    <span><%= list.body %></span>
+  <% end %>
+   </div>
+</div>
+
+
+<h3>New book</h3>
+<div class="book">
 <% if @list.errors.any? %>
   <%=@list.errors.count %>errors prohibited this book from being saved
   <ul>
@@ -14,6 +31,9 @@
   
   <p>Body</p>
   <%= f.text_area :body %>
-  
+</div> 
+<div class="create-box">
   <%= f.submit 'Create Book' %>
+</div>
+
 <% end %>
