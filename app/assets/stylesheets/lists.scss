@@ -6,24 +6,42 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-h3{
-  margin :20px;
+// Common
+.commonul{
+  list-style-type:none;
+  margin:15px;
 }
-.title{
+.commonli{
+  display:inline-block;
   text-align:center;
+  width:50px;
 }
-
-.list-wrap{
-  display:block
-}
-.book{
-  margin:10px 20px;
+.commonli + .commonli {
+  border-left:1px solid #000;
 }
 .create-box{
   margin:0 20px;
 }
-.parent{
+
+// Edit
+h3{
+  margin :20px;
+}
+.edit{
+  margin:20px;
+}
+
+//Show
+.show{
+  margin:40px;
+  display:flex;
+  flex-wrap:wrap;
+}
+// new
+h2{
+  margin :20px;
+}
+.new{
   margin:20px;
   display:flex;
 }
@@ -32,25 +50,15 @@ h3{
   flex-direction:column;
   margin:0px 10px 0px 0px;
 }
-.edit{
-  margin:40px;
-  display:flex;
-  flex-wrap:wrap;
-}
-.edit2{
-  margin:20px;
-  display:flex;
-  flex-wrap:wrap;
-}
-ul{
-  list-style-type:none;
-  margin:15px;
-}
-li{
-  display:inline-block;
+.title{
   text-align:center;
-  width:50px;
 }
-li + li {
-  border-left:1px solid #000;
+.errorbox{
+  width:120px;
+  height:20px;
+  margin:20px;
+  background-color:red;
+}
+.book{
+  margin:20px;
 }

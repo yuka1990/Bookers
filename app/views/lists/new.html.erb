@@ -1,5 +1,5 @@
-<h3>Books</h3>
-<div class="parent">
+<h2>Books</h2>
+<div class="new">
   <div class="box">
    <h4 class="title">Title</h4>
    <% @lists.each do |list| %>
@@ -34,30 +34,34 @@
   <%= link_to "Destroy",list_path(number), method: :delete, "data-confirm" => "Are you sure?" %>
   <% end %>
    </div>
-   
-   
- 
-   
 </div>
 
 
 <h3>New book</h3>
 <div class="book">
-<% if @list.errors.any? %>
-  <%=@list.errors.count %>errors prohibited this book from being saved
-  <ul>
-    <% @list.errors.full_messages.each do |message| %>
-     <li><%= message %> </li>
+  <div class"errorbox">
+   <% if @list.errors.any? %>
+   <%=@list.errors.count %>errors prohibited this book from being saved
+  　<ul class="other">
+     <% @list.errors.full_messages.each do |message| %>
+     <li class="other"><%= message %> </li>
+     <% end %>
+    </ul>
     <% end %>
-  </ul>
-<% end %>
+   </div>
+
+
+
+
 <%= form_with model: @list, url:'/lists',method: :post do |f| %>
   <p>Title</p>
   <%= f.text_field :title %>
   
   <p>Body</p>
   <%= f.text_area :body %>
-</div> 
+</div>  
+  
+  
 <div class="create-box">
   <%= f.submit 'Create Book' %>
 </div>

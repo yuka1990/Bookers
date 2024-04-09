@@ -1,5 +1,5 @@
 <h3>Editing Book</h3>
-<div class="book">
+<div class="edit">
  <%= form_with model:@list do |f| %>
  <p>Title</p>
  <%= f.text_field :title %>
@@ -11,8 +11,8 @@
 </div>
 <% end %>
 
-<ul>
- <li><%= link_to'Show', list_path(params[:id]) %></li>
- <li><%= link_to'Back', new_list_path %></li>
+<ul class="commonul">
+ <li class="commonli"><%= link_to'Show', list_path(params[:id]) %></li>
+ <li class="commonli"><%= link_to'Back', new_list_path %></li>
 </ul>
 
