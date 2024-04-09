@@ -6,12 +6,38 @@
      <span><%= list.title %></span>
    <% end %>
    </div>
+   
   <div class="box">
   <h4 class="title">Body</h4>
   <% @lists.each do |list| %>
     <span><%= list.body %></span>
   <% end %>
    </div>
+   
+  <div class="box">
+  <h4 class="title"><br></h4>
+  <% @lists.each do |number| %>
+   <%=link_to'Show', list_path(number) %>
+  <% end %>
+   </div>
+  
+  <div class="box">
+  <h4 class="title"><br></h4>
+  <% @lists.each do |number| %>
+   <%=link_to'Edit', edit_list_path(number) %>
+  <% end %>
+   </div>
+  
+   <div class="box">
+  <h4 class="title"><br></h4>
+  <% @lists.each do |number| %>
+  <%= link_to "Destroy",list_path(number), method: :delete, "data-confirm" => "Are you sure?" %>
+  <% end %>
+   </div>
+   
+   
+ 
+   
 </div>
 
 

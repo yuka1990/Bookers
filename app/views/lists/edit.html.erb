@@ -10,3 +10,9 @@
  <%= f.submit 'Update Book'%>
 </div>
 <% end %>
+
+<ul>
+ <li><%= link_to'Show', list_path(params[:id]) %></li>
+ <li><%= link_to'Back', new_list_path %></li>
+</ul>
+

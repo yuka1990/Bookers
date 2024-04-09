@@ -26,12 +26,10 @@ h3{
 .parent{
   margin:20px;
   display:flex;
-  flex-wrap:wrap;
-}
-span{
-  display:block;
 }
 .box{
+  display:flex;
+  flex-direction:column;
   margin:0px 10px 0px 0px;
 }
 .edit{
@@ -43,4 +41,16 @@ span{
   margin:20px;
   display:flex;
   flex-wrap:wrap;
+}
+ul{
+  list-style-type:none;
+  margin:15px;
+}
+li{
+  display:inline-block;
+  text-align:center;
+  width:50px;
+}
+li + li {
+  border-left:1px solid #000;
 }
